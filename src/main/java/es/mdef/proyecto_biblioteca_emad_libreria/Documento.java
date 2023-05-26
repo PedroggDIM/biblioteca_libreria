@@ -12,7 +12,7 @@ public interface Documento {
 	List<Prestamo> getPrestamos();
 
 	// Getters y Setters de la clase
-	Long getId();
+	
 
 	String getTitulo();
 
@@ -25,5 +25,7 @@ public interface Documento {
 	Date getFechaAlta();
 
 	boolean isDisponible();
+	
+	int getNumCopias();
 
 }

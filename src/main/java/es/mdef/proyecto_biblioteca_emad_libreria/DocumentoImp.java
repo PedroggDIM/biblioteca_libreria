@@ -5,16 +5,28 @@ import java.util.List;
 
 public class DocumentoImp implements Documento {
 	
-	private Long id;
+
 	private String titulo;
 	private String autor;
 	private String sinopsis;
+	
+	private int numCopias;
+	
 	private int estanteria;
+		
+	
 	private Date fechaAlta;
 	private boolean disponible;
 	
 	public static enum Categoria {
 		escrito, audiovisual
+	}
+	
+	public int getNumCopias() {
+		return numCopias;
+	}
+	public void setNumCopias(int numCopias) {
+		this.numCopias = numCopias;
 	}
 	
 	@Override
@@ -38,14 +50,7 @@ public class DocumentoImp implements Documento {
 	}
 
 	// Getters y Setters de la clase
-	@Override
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
+	
 
 	@Override
 	public String getTitulo() {
