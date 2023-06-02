@@ -8,15 +8,6 @@ public class AudiovisualImp extends DocumentoImp implements Audiovisuable{
     private int duracion;
     private String tipo;
     
-      
-	@Override
-	public Categoria getCategoria() {		
-		return super.getCategoria();
-	}
-	@Override
-	public void setCategoria(Categoria categoria) {	
-		super.setCategoria(categoria);
-	}
 	@Override
 	public int getISAN() {
 		return ISAN;

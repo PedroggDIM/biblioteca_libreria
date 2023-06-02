@@ -9,15 +9,7 @@ public class EscritoImp extends DocumentoImp implements Escritable{
 	private int tamano;
 	
 	
-	
-	@Override
-	public Categoria getCategoria() {		
-		return super.getCategoria();
-	}
-	@Override
-	public void setCategoria(Categoria categoria) {
-		super.setCategoria(categoria);
-	}
+
 	@Override
 	public int getISBN() {
 		return ISBN;
