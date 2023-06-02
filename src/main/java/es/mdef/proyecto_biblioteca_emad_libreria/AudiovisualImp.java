@@ -1,19 +1,22 @@
 package es.mdef.proyecto_biblioteca_emad_libreria;
 
+import es.mdef.proyecto_biblioteca_emad_libreria.DocumentoImp.Categoria;
+
 public class AudiovisualImp extends DocumentoImp implements Audiovisuable{
 
 	private int ISAN;
     private int duracion;
     private String tipo;
     
-    @Override
-	public Categoria getCategoria() {
-		return Categoria.audiovisual;
+      
+	@Override
+	public Categoria getCategoria() {		
+		return super.getCategoria();
 	}
-    @Override
-	public Categoria setCategoria() {		
-		return Categoria.audiovisual;
-	}      
+	@Override
+	public void setCategoria(Categoria categoria) {	
+		super.setCategoria(categoria);
+	}
 	@Override
 	public int getISAN() {
 		return ISAN;
