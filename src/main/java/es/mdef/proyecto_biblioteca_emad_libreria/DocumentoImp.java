@@ -16,27 +16,28 @@ public class DocumentoImp implements Documento {
 	
 	private Date fechaAlta;
 	private boolean disponible;
-	
+	private Categoria categoria;
 	public static enum Categoria {
 		escrito, audiovisual
 	}
-	private Categoria categoria;
 	
 	
-	public int getNumCopias() {
-		return numCopias;
-	}
-	public void setNumCopias(int numCopias) {
-		this.numCopias = numCopias;
-	}  
-
-
+	
 	public Categoria getCategoria() {
 		return categoria;
 	}
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+	public int getNumCopias() {
+		return numCopias;
+	}
+	public void setNumCopias(int numCopias) {
+		this.numCopias = numCopias;
+	}
+	
+	
+
 
 	List<Prestamo> prestamos;
 
@@ -49,8 +50,7 @@ public class DocumentoImp implements Documento {
 		this.prestamos = prestamos;
 	}
 
-	// Getters y Setters de la clase
-	
+
 
 	@Override
 	public String getTitulo() {
