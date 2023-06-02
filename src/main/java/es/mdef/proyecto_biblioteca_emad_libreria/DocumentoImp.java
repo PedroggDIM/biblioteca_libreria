@@ -12,8 +12,7 @@ public class DocumentoImp implements Documento {
 	
 	private int numCopias;
 	
-	private int estanteria;
-		
+	private int estanteria;	
 	
 	private Date fechaAlta;
 	private boolean disponible;
@@ -21,22 +20,23 @@ public class DocumentoImp implements Documento {
 	public static enum Categoria {
 		escrito, audiovisual
 	}
+	private Categoria categoria;
+	
 	
 	public int getNumCopias() {
 		return numCopias;
 	}
 	public void setNumCopias(int numCopias) {
 		this.numCopias = numCopias;
-	}
-	
-	@Override
-	public Categoria getCategoria() {
-		return null;
-	}
-	public Categoria setCategoria() {		
-		return null;
-	}
+	}  
 
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
 
 	List<Prestamo> prestamos;
 
