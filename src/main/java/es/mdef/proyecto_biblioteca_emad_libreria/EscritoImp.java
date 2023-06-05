@@ -1,7 +1,5 @@
 package es.mdef.proyecto_biblioteca_emad_libreria;
 
-import es.mdef.proyecto_biblioteca_emad_libreria.DocumentoImp.Categoria;
-
 public class EscritoImp extends DocumentoImp implements Escritable{
 
 	private int ISBN;
@@ -30,6 +28,10 @@ public class EscritoImp extends DocumentoImp implements Escritable{
 	}
 	public void setTamano(int tamano) {
 		this.tamano = tamano;
+	}
+	@Override
+	public Categoria getCategoria() {
+		return Categoria.escrito;
 	}
 
 }

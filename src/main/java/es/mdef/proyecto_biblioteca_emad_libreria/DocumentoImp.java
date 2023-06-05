@@ -3,43 +3,26 @@ package es.mdef.proyecto_biblioteca_emad_libreria;
 import java.util.Date;
 import java.util.List;
 
-public class DocumentoImp implements Documento {
-	
+public abstract class DocumentoImp implements Documento {
 
 	private String titulo;
 	private String autor;
 	private String sinopsis;
-	
 	private int numCopias;
-	
-	private int estanteria;	
-	
+	private int estanteria;
 	private Date fechaAlta;
 	private boolean disponible;
-	private Categoria categoria;
-	public static enum Categoria {
-		escrito, audiovisual
-	}
-	
-	
-	
-	public Categoria getCategoria() {
-		return categoria;
-	}
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
-	}
+	private List<Prestamo> prestamos;
+
+	public abstract Categoria getCategoria();
+
 	public int getNumCopias() {
 		return numCopias;
 	}
+
 	public void setNumCopias(int numCopias) {
 		this.numCopias = numCopias;
 	}
-	
-	
-
-
-	List<Prestamo> prestamos;
 
 	@Override
 	public List<Prestamo> getPrestamos() {
@@ -49,8 +32,6 @@ public class DocumentoImp implements Documento {
 	public void setPrestamos(List<Prestamo> prestamos) {
 		this.prestamos = prestamos;
 	}
-
-
 
 	@Override
 	public String getTitulo() {
@@ -104,6 +85,6 @@ public class DocumentoImp implements Documento {
 
 	public void setDisponible(boolean disponible) {
 		this.disponible = disponible;
-	}	
+	}
 
 }
