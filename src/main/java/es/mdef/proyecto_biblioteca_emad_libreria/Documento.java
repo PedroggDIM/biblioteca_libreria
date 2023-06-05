@@ -8,7 +8,7 @@ public interface Documento {
 	// Un documento tiene muchos préstamos
 	List<Prestamo> getPrestamos();
 
-	// Getters y Setters de la clase
+	// Getters y Setters de la clase Documento
 
 	String getTitulo();
 
